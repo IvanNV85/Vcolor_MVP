@@ -1,0 +1,34 @@
+/* ==========================================================================
+   Vibe Color — Custom Styles
+   Supplements Tailwind CSS with base resets and scrollbar config
+   ========================================================================== */
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    overscroll-behavior: none;
+  }
+
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+
+  main > :last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Hide scrollbar across all browsers */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;    /* Firefox */
+  -ms-overflow-style: none; /* IE / Edge */
+}
