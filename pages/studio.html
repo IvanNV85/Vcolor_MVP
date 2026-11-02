@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="vi">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Studio Phân Tích Sắc Diện Quang Phổ AI — Vibe Color</title>
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Material Symbols Outlined -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet">
+
+  <!-- Main CSS Reset & Tailwind CDN with Config -->
+  <link rel="stylesheet" href="../css/main.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../js/config/tailwind.config.js"></script>
+
+  <style>
+    /* High-tech golden laser scanner animation */
+    @keyframes laserScan {
+      0% {
+        top: 0%;
+        opacity: 0.8;
+      }
+
+      50% {
+        top: 92%;
+        opacity: 1;
+      }
+
+      100% {
+        top: 0%;
+        opacity: 0.8;
+      }
+    }
+
+    .laser-beam {
+      animation: laserScan 2.4s ease-in-out infinite;
+    }
+
+    .pulse-glow {
+      box-shadow: 0 0 25px rgba(197, 160, 89, 0.45);
+    }
+  </style>
+</head>
+
+<body
+  class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+
+  <!-- ========================================================================
+       TOP FIXED NAVIGATION BAR
+       ======================================================================== -->
+  <header
+    class="fixed top-0 left-0 right-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_12px_rgba(31,27,24,0.03)]">
+    <div class="h-20 w-full px-margin flex items-center justify-between gap-gutter">
+
+      <!-- Brand Logo -->
+      <a href="../home_page.html" class="flex items-center gap-space-md shrink-0">
+        <img alt="Vibe Color Logo" class="h-8 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh9-t9LJmg-xmOC_87FTKGngybQIMCyPJTeFO6_URin3rpKCIOhrUtUeh6aAA58fS4Oipi4VbUjVoa511wMonafICTKP_TAFF8Vlat2EtsJ-YXMbKLpakW9iN9BrF4puWiS7s0n662v4UXK1prBq5YlfYLuX_kU7lfSz7SSyB2iVDgPCpZeipATmHNB4K7Wvi40_ZKj3vaSAPf3AStXcaIzaTUsEoFpzeOUAZHHe17dM3LrO9kGw8o">
+        <div class="flex flex-col">
+          <span class="font-headline-sm text-headline-sm text-primary tracking-wide leading-none">Vibe Color</span>
+          <span class="font-label-sm text-label-sm text-outline tracking-widest uppercase mt-0.5">Haute
+            Colorimetrie</span>
+        </div>
+      </a>
+
+      <!-- Main Navigation Menu -->
+      <nav class="hidden xl:flex items-center gap-space-xs p-space-xs bg-surface-container-low rounded-full">
+        <a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all duration-300"
+          href="../home_page.html">Trang chủ &amp; Khám phá</a>
+        <a class="px-space-md py-space-xs rounded-full font-label-md text-label-md bg-secondary-container text-on-secondary-container font-semibold shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)]"
+          href="studio.html">Studio Phân tích AI</a>
+        <a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all duration-300"
+          href="dossier.html">Hồ sơ Sắc diện</a>
+        <a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all duration-300"
+          href="cosmetics.html">Trợ lý Mỹ phẩm</a>
+      </nav>
+
+      <!-- Right Action Items -->
+      <div class="flex items-center gap-space-md shrink-0">
+        <a class="hidden md:inline-flex items-center justify-center px-space-lg py-space-sm rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md tracking-wider uppercase transition-all duration-300 hover:bg-primary hover:text-on-primary shadow-[0_4px_16px_-2px_rgba(197,160,89,0.35)]"
+          href="dossier.html">
+          Xem Hồ Sơ Sắc Ký
+        </a>
+
+        <div class="flex items-center gap-space-xs pl-space-xs">
+          <button aria-label="Mục đã lưu"
+            class="w-9 h-9 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"
+            type="button">
+            <span class="material-symbols-outlined text-[20px]">bookmark</span>
+          </button>
+          <button aria-label="Thông báo"
+            class="w-9 h-9 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative"
+            type="button">
+            <span class="material-symbols-outlined text-[20px]">notifications</span>
+            <span class="absolute top-2 right-2 w-1.5 h-1.5 rounded-full bg-primary"></span>
+          </button>
+          <div class="flex items-center gap-space-xs pl-space-xs ml-space-xs">
+            <div class="p-0.5 rounded-full bg-surface-container-high">
+              <img id="topNavAvatar" alt="Profile" class="w-8 h-8 rounded-full object-cover"
+                src="../assets/images/portraits/thao_linh_soft_autumn.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN STUDIO WORKSPACE
+       ======================================================================== -->
+  <main class="w-full pt-28 pb-space-xl px-margin-mobile md:px-margin min-h-screen">
+    <div class="max-w-4xl mx-auto flex flex-col items-center text-center">
+
+      <!-- Studio Header Badge -->
+      <div
+        class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container-high mb-space-xs shadow-xs">
+        <span class="material-symbols-outlined text-primary text-[16px]">auto_awesome</span>
+        <span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">STUDIO AI DIAGNOSTIC</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-space-xs">
+        Studio Phân Tích Sắc Diện Quang Phổ AI
+      </h1>
+
+      <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mb-space-lg">
+        Khu vực quét hình ảnh Skin Lens và chẩn đoán quang phổ 120 dải màu tự động dành cho khách hàng.
+      </p>
+
+      <!-- ====================================================================
+           VIEW 1: UPLOAD & CHOOSE PORTRAIT CARD (DEFAULT STATE)
+           ==================================================================== -->
+      <div id="uploadView" class="w-full flex flex-col gap-space-lg">
+
+        <!-- Dashed Dropzone Box -->
+        <div id="dropZone"
+          class="group relative p-space-xl md:p-12 rounded-3xl bg-surface-container-lowest border-2 border-dashed border-outline-variant/60 hover:border-primary transition-all duration-300 flex flex-col items-center justify-center gap-space-md shadow-md cursor-pointer hover:shadow-xl">
+
+          <input type="file" id="portraitFileInput" accept="image/*" class="hidden">
+
+          <div
+            class="w-20 h-20 rounded-full bg-primary-fixed/80 flex items-center justify-center text-on-primary-fixed shadow-inner group-hover:scale-110 transition-transform duration-300">
+            <span class="material-symbols-outlined text-4xl">add_a_photo</span>
+          </div>
+
+          <div class="flex flex-col items-center max-w-md">
+            <span class="font-headline-sm text-headline-sm text-on-surface mb-1 font-semibold">
+              Tải ảnh chân dung tự nhiên hoặc chụp trực tiếp
+            </span>
+            <span class="font-body-sm text-body-sm text-on-surface-variant">
+              Hỗ trợ JPG, PNG định dạng chất lượng cao (không dùng filter làm đẹp)
+            </span>
+          </div>
+
+          <!-- Action Buttons inside dropzone -->
+          <div class="flex flex-wrap items-center justify-center gap-space-sm mt-space-xs">
+            <button id="browseFileBtn" type="button"
+              class="px-space-xl py-space-sm rounded-full bg-[#5C451D] text-white font-label-md text-label-md uppercase tracking-wider hover:bg-black transition-all shadow-md flex items-center gap-2">
+              <span class="material-symbols-outlined text-[18px]">upload_file</span>
+              <span>CHỌN ẢNH TỪ MÁY</span>
+            </button>
+
+            <button id="webcamBtn" type="button"
+              class="px-space-lg py-space-sm rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors border border-outline-variant/30 flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[18px]">photo_camera</span>
+              <span>Chụp Từ Camera</span>
+            </button>
+          </div>
+
+          <div class="text-[12px] font-body-sm text-outline mt-2">
+            Kéo và thả file ảnh chân dung vào đây để bắt đầu phân tích tức thì
+          </div>
+        </div>
+
+        <!-- ==================================================================
+             PRESET PORTRAITS SELECTOR (CHỌN CHÂN DUNG MẪU CÓ SẴN)
+             ================================================================== -->
+        <div
+          class="w-full flex flex-col items-start p-space-md rounded-2xl bg-surface-container-low border border-outline-variant/30">
+          <div class="flex items-center justify-between w-full mb-space-sm">
+            <div class="flex items-center gap-space-xs">
+              <span class="material-symbols-outlined text-primary text-[18px]">palette</span>
+              <span class="font-label-md text-label-md text-on-surface font-semibold uppercase tracking-wider">
+                Hoặc chọn chân dung mẫu chuẩn Studio:
+              </span>
+            </div>
+            <span class="font-label-sm text-[11px] text-outline">Bấm để quét ngay</span>
+          </div>
+
+          <!-- 4 Presets Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm w-full">
+
+            <!-- Preset 1: Nguyễn Thảo Linh (Default - Soft Autumn) -->
+            <button
+              onclick="selectPresetModel('../assets/images/portraits/thao_linh_soft_autumn.jpg', 'Nguyễn Thảo Linh', 'MÙA THU DỊU NHẸ', 'Soft Autumn')"
+              class="group p-space-xs rounded-xl bg-surface-container-lowest border-2 border-primary hover:shadow-md transition-all flex flex-col items-center text-center cursor-pointer">
+              <div class="w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container mb-2 relative">
+                <img src="../assets/images/portraits/thao_linh_soft_autumn.jpg" alt="Nguyễn Thảo Linh"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                <span
+                  class="absolute top-1 left-1 px-1.5 py-0.5 rounded bg-primary text-white text-[9px] font-bold">CHUẨN</span>
+              </div>
+              <span class="font-label-md text-[13px] text-on-surface font-semibold leading-tight">Nguyễn Thảo
+                Linh</span>
+              <span class="font-label-sm text-[11px] text-primary">Soft Autumn</span>
+            </button>
+
+            <!-- Preset 2: Khánh Linh Nguyễn (Warm Autumn) -->
+            <button
+              onclick="selectPresetModel('https://lh3.googleusercontent.com/aida-public/AB6AXuA40i9W43wBEDcm-VxQipUSNFVCz_7fripVBmQ-jKrIeirunHZJ8b7-ZCavMFyBiNGrad_gPK4xry8Ko6hQWPtBVNwRP7XNKqyyTCNnzNRw3Mfy9HTWQrYncuD8pyF6egkEdwSVhLxFxXpZtfPzU6afEC14JG19l9jiVGN4xRWrSR_Y2uRKPpwIChTCmTIG76FoaoZ529dx-NY3x8Ozeqgr7ctlHC08AVX2LFiMfgEnnwo34_F5ORS7', 'Khánh Linh Nguyễn', 'THU RỰC RỠ', 'Warm Autumn')"
+              class="group p-space-xs rounded-xl bg-surface-container-lowest border border-outline-variant/30 hover:border-primary hover:shadow-md transition-all flex flex-col items-center text-center cursor-pointer">
+              <div class="w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container mb-2">
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA40i9W43wBEDcm-VxQipUSNFVCz_7fripVBmQ-jKrIeirunHZJ8b7-ZCavMFyBiNGrad_gPK4xry8Ko6hQWPtBVNwRP7XNKqyyTCNnzNRw3Mfy9HTWQrYncuD8pyF6egkEdwSVhLxFxXpZtfPzU6afEC14JG19l9jiVGN4xRWrSR_Y2uRKPpwIChTCmTIG76FoaoZ529dx-NY3x8Ozeqgr7ctlHC08AVX2LFiMfgEnnwo34_F5ORS7"
+                  alt="Khánh Linh Nguyễn"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              </div>
+              <span class="font-label-md text-[13px] text-on-surface font-semibold leading-tight">Khánh Linh
+                Nguyễn</span>
+              <span class="font-label-sm text-[11px] text-outline">Warm Autumn</span>
+            </button>
+
+            <!-- Preset 3: Minh Trang Đỗ (Cool Summer) -->
+            <button
+              onclick="selectPresetModel('https://lh3.googleusercontent.com/aida-public/AB6AXuAI93vY-QtR9rDJ8nq43agYCnF8BriXpRPXTWxb2QH7UoUxFK6G0ongLvTWNL886K5pm1rsichmcC_z4hLOw-XJLV4KGpY134P4a4XBuPgCwPLj3zHNaoqoTkMwCKkuyccqfBDgkMwWVmV0SDH2AlyrGP2GQMQok8Y5AtcHT1qf60vutZMZ2NKz4Ub5cRfSzNCtTK0We8xu92ZVYwPjP6j0CdfS6CTzZhXJt7D5pBJc7n_6xBHV5s0p', 'Minh Trang Đỗ', 'HẠ TINH TẾ', 'Cool Summer')"
+              class="group p-space-xs rounded-xl bg-surface-container-lowest border border-outline-variant/30 hover:border-primary hover:shadow-md transition-all flex flex-col items-center text-center cursor-pointer">
+              <div class="w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container mb-2">
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI93vY-QtR9rDJ8nq43agYCnF8BriXpRPXTWxb2QH7UoUxFK6G0ongLvTWNL886K5pm1rsichmcC_z4hLOw-XJLV4KGpY134P4a4XBuPgCwPLj3zHNaoqoTkMwCKkuyccqfBDgkMwWVmV0SDH2AlyrGP2GQMQok8Y5AtcHT1qf60vutZMZ2NKz4Ub5cRfSzNCtTK0We8xu92ZVYwPjP6j0CdfS6CTzZhXJt7D5pBJc7n_6xBHV5s0p"
+                  alt="Minh Trang Đỗ"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              </div>
+              <span class="font-label-md text-[13px] text-on-surface font-semibold leading-tight">Minh Trang Đỗ</span>
+              <span class="font-label-sm text-[11px] text-outline">Cool Summer</span>
+            </button>
+
+            <!-- Preset 4: Diệu Hương Lê (Vivid Winter) -->
+            <button
+              onclick="selectPresetModel('https://lh3.googleusercontent.com/aida-public/AB6AXuBfAhyFfzuycKaR3ppHQH4tHppi3-M3vQ-gcljkIqOrBbVcFw9FAl0L6Rj5ASzajWxLKAnrEBYwOr6Eo1nW6uJhd3KBp-xB-KsJzMOUZsyZReZU98oAdbBd4wjnFNtOK2IUEhcJBWOMeiweHvccXS7rNY-VIIsCTlUwp4yet9ZrE-7XcpDBNa-jG1PAbYIet57AVFtUji9_M0PBTtJRB37V3zCVYRkBiVpjComq_bUuNVNj4eK9nl8m', 'Diệu Hương Lê', 'ĐÔNG QUYỀN LỰC', 'Vivid Winter')"
+              class="group p-space-xs rounded-xl bg-surface-container-lowest border border-outline-variant/30 hover:border-primary hover:shadow-md transition-all flex flex-col items-center text-center cursor-pointer">
+              <div class="w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container mb-2">
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfAhyFfzuycKaR3ppHQH4tHppi3-M3vQ-gcljkIqOrBbVcFw9FAl0L6Rj5ASzajWxLKAnrEBYwOr6Eo1nW6uJhd3KBp-xB-KsJzMOUZsyZReZU98oAdbBd4wjnFNtOK2IUEhcJBWOMeiweHvccXS7rNY-VIIsCTlUwp4yet9ZrE-7XcpDBNa-jG1PAbYIet57AVFtUji9_M0PBTtJRB37V3zCVYRkBiVpjComq_bUuNVNj4eK9nl8m"
+                  alt="Diệu Hương Lê"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              </div>
+              <span class="font-label-md text-[13px] text-on-surface font-semibold leading-tight">Diệu Hương Lê</span>
+              <span class="font-label-sm text-[11px] text-outline">Vivid Winter</span>
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ====================================================================
+           VIEW 2: HIGH-TECH AI SKIN LENS SCANNING STATE
+           ==================================================================== -->
+      <div id="scanningView" class="w-full hidden flex-col items-center gap-space-lg">
+
+        <div
+          class="relative w-full max-w-sm rounded-3xl overflow-hidden shadow-2xl bg-surface-container-lowest border border-outline-variant/40 p-2">
+
+          <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden bg-surface-container">
+            <!-- Preview Portrait Image -->
+            <img id="previewImage" src="" alt="Scanning Portrait" class="w-full h-full object-cover">
+
+            <!-- Scanning Laser Line Overlay -->
+            <div id="laserBeam"
+              class="laser-beam absolute left-0 right-0 h-1.5 bg-gradient-to-r from-transparent via-primary-container to-transparent pulse-glow z-20 pointer-events-none">
+              <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-8 h-3 rounded-full bg-primary/40 blur-sm"></div>
+            </div>
+
+            <!-- Face Detection Overlay Frame -->
+            <div
+              class="absolute inset-8 border border-primary/40 rounded-2xl pointer-events-none z-10 flex flex-col justify-between p-2">
+              <div class="flex justify-between">
+                <span class="w-3 h-3 border-t-2 border-l-2 border-primary"></span>
+                <span class="w-3 h-3 border-t-2 border-r-2 border-primary"></span>
+              </div>
+              <div class="flex justify-between">
+                <span class="w-3 h-3 border-b-2 border-l-2 border-primary"></span>
+                <span class="w-3 h-3 border-b-2 border-r-2 border-primary"></span>
+              </div>
+            </div>
+
+            <!-- Top Stage Tag -->
+            <div
+              class="absolute top-4 left-4 z-20 px-3 py-1 rounded-full bg-surface/90 backdrop-blur-md shadow-xs flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+              <span id="scanStatusTag"
+                class="font-label-sm text-[11px] uppercase tracking-wider font-semibold text-on-surface">
+                ĐANG QUÉT QUANG PHỔ
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Telemetry Progress Console -->
+        <div
+          class="w-full max-w-lg p-space-md rounded-2xl bg-surface-container-lowest border border-outline-variant/30 shadow-md flex flex-col gap-space-xs text-left">
+          <div class="flex items-center justify-between">
+            <span id="scanStageTitle" class="font-headline-sm text-[16px] text-on-surface font-semibold">
+              Khởi động Skin Lens AI Engine...
+            </span>
+            <span id="scanPercentage" class="font-label-md text-primary font-bold">25%</span>
+          </div>
+
+          <div class="w-full h-2 rounded-full bg-surface-container overflow-hidden my-1">
+            <div id="scanProgressBar" class="h-full rounded-full bg-primary transition-all duration-300"
+              style="width: 25%;"></div>
+          </div>
+
+          <p id="scanDetailLog" class="font-body-sm text-[12px] text-on-surface-variant font-mono">
+            • [01/04] Đang cân bằng trắng (White Balance) &amp; khử quang sai ánh sáng phòng...
+          </p>
+
+          <!-- Complete CTA (Shown after 100%) -->
+          <div id="scanSuccessActions"
+            class="hidden flex-col sm:flex-row items-center gap-space-sm pt-space-xs mt-space-xs border-t border-outline-variant/20">
+            <a href="dossier.html"
+              class="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2 px-space-xl py-space-sm rounded-full bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider hover:bg-primary-container hover:text-on-primary-container transition-all shadow-md">
+              <span class="material-symbols-outlined text-[18px]">assignment_turned_in</span>
+              <span>XEM HỒ SƠ SẮC DIỆN NGAY</span>
+            </a>
+
+            <button onclick="resetScanner()" type="button"
+              class="px-space-md py-space-sm rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors">
+              Chọn ảnh khác
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer
+    class="w-full bg-surface-container-low text-on-surface-variant border-t border-outline-variant/30 mt-space-xl">
+    <div class="w-full px-margin pt-space-xl pb-space-lg">
+      <div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm">
+        <p class="font-label-sm text-label-sm text-outline">
+          © 2025 Vibe Color. Bản quyền thuộc về Viện Nghiên cứu Sắc diện Á Đông. All rights reserved.
+        </p>
+        <div class="flex items-center gap-space-md font-label-sm text-label-sm text-outline">
+          <a class="hover:text-on-surface transition-colors" href="../home_page.html">Trang chủ</a>
+          <a class="hover:text-on-surface transition-colors" href="dossier.html">Hồ sơ Sắc diện</a>
+          <a class="hover:text-on-surface transition-colors" href="cosmetics.html">Trợ lý Mỹ phẩm</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       FLOATING TOAST NOTIFICATION
+       ======================================================================== -->
+  <div id="toast"
+    class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 px-space-lg py-space-sm rounded-full bg-[#1F1B18] text-white font-label-md text-label-md shadow-2xl flex items-center gap-space-xs opacity-0 pointer-events-none transition-all duration-300">
+    <span class="material-symbols-outlined text-primary-container text-[18px]">check_circle</span>
+    <span id="toastMessage">Thông báo</span>
+  </div>
+
+  <!-- ========================================================================
+       SCRIPT: STUDIO SCANNING & LOCALSTORAGE SYNC
+       ======================================================================== -->
+  <script>
+    const fileInput = document.getElementById('portraitFileInput');
+    const browseBtn = document.getElementById('browseFileBtn');
+    const dropZone = document.getElementById('dropZone');
+    const webcamBtn = document.getElementById('webcamBtn');
+
+    const uploadView = document.getElementById('uploadView');
+    const scanningView = document.getElementById('scanningView');
+    const previewImage = document.getElementById('previewImage');
+    const laserBeam = document.getElementById('laserBeam');
+    const scanStatusTag = document.getElementById('scanStatusTag');
+    const scanStageTitle = document.getElementById('scanStageTitle');
+    const scanPercentage = document.getElementById('scanPercentage');
+    const scanProgressBar = document.getElementById('scanProgressBar');
+    const scanDetailLog = document.getElementById('scanDetailLog');
+    const scanSuccessActions = document.getElementById('scanSuccessActions');
+
+    // Click trigger for file input
+    browseBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      fileInput.click();
+    });
+    dropZone.addEventListener('click', () => {
+      fileInput.click();
+    });
+
+    // Handle File Pick
+    fileInput.addEventListener('change', (e) => {
+      if (e.target.files && e.target.files[0]) {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.onload = (uploadEvt) => {
+          startDiagnosticFlow(uploadEvt.target.result, 'Khách hàng', 'MÙA THU DỊU NHẸ', 'Soft Autumn');
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    // Drag & Drop Handlers
+    ['dragenter', 'dragover'].forEach(eventName => {
+      dropZone.addEventListener(eventName, (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        dropZone.classList.add('border-primary', 'bg-surface-container-high/40');
+      }, false);
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+      dropZone.addEventListener(eventName, (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        dropZone.classList.remove('border-primary', 'bg-surface-container-high/40');
+      }, false);
+    });
+
+    dropZone.addEventListener('drop', (e) => {
+      const dt = e.dataTransfer;
+      const files = dt.files;
+      if (files && files[0]) {
+        const reader = new FileReader();
+        reader.onload = (uploadEvt) => {
+          startDiagnosticFlow(uploadEvt.target.result, 'Khách hàng', 'MÙA THU DỊU NHẸ', 'Soft Autumn');
+        };
+        reader.readAsDataURL(files[0]);
+      }
+    });
+
+    // Webcam button fallback
+    webcamBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      fileInput.click();
+    });
+
+    // Select Preset Model
+    function selectPresetModel(imgUrl, name, seasonTitle, seasonKey) {
+      startDiagnosticFlow(imgUrl, name, seasonTitle, seasonKey);
+    }
+
+    // Start Simulation Flow
+    function startDiagnosticFlow(imgUrl, name, seasonTitle, seasonKey) {
+      uploadView.classList.add('hidden');
+      scanningView.classList.remove('hidden');
+      previewImage.src = imgUrl;
+
+      // Reset Telemetry
+      scanPercentage.textContent = '20%';
+      scanProgressBar.style.width = '20%';
+      scanStageTitle.textContent = 'Đang nhận diện khuôn mặt & ánh sáng...';
+      scanDetailLog.textContent = '• [01/04] Đang cân bằng trắng (White Balance) & triệt tiêu quang sai...';
+      laserBeam.classList.remove('hidden');
+      scanSuccessActions.classList.add('hidden');
+
+      // Stage 2
+      setTimeout(() => {
+        scanPercentage.textContent = '50%';
+        scanProgressBar.style.width = '50%';
+        scanStageTitle.textContent = 'Phân tích sắc tố Melanin biểu bì...';
+        scanDetailLog.textContent = '• [02/04] Đo quang phổ Melanin A Scale: 96.8% (Warm Undertone chiếm ưu thế)...';
+      }, 700);
+
+      // Stage 3
+      setTimeout(() => {
+        scanPercentage.textContent = '85%';
+        scanProgressBar.style.width = '85%';
+        scanStageTitle.textContent = 'Draping quang phổ 120 dải màu Á Đông...';
+        scanDetailLog.textContent = '• [03/04] Thử nghiệm phản chiếu độ tương phản trên gò má & viền môi...';
+      }, 1400);
+
+      // Stage 4: Complete
+      setTimeout(() => {
+        scanPercentage.textContent = '100%';
+        scanProgressBar.style.width = '100%';
+        scanStageTitle.textContent = `Hoàn tất: ${seasonTitle} (${seasonKey})!`;
+        scanDetailLog.textContent = '• [04/04] Đã đồng bộ toàn bộ chỉ số vào Hồ Sơ Sắc Diện Cá Nhân thành công.';
+        laserBeam.classList.add('hidden');
+        scanStatusTag.textContent = 'HOÀN TẤT CHẨN ĐOÁN';
+        scanStatusTag.classList.remove('text-on-surface');
+        scanStatusTag.classList.add('text-emerald-700');
+
+        // Save to LocalStorage
+        const userProfile = {
+          portraitUrl: imgUrl,
+          name: name,
+          seasonTitle: seasonTitle,
+          seasonKey: seasonKey,
+          melanin: '96.8%',
+          updatedAt: new Date().toLocaleDateString('vi-VN')
+        };
+        localStorage.setItem('vibeColor_userProfile', JSON.stringify(userProfile));
+
+        // Update Nav Avatar immediately
+        const topNavAvatar = document.getElementById('topNavAvatar');
+        if (topNavAvatar) topNavAvatar.src = imgUrl;
+
+        // Show Success Actions
+        scanSuccessActions.classList.remove('hidden');
+        scanSuccessActions.classList.add('flex');
+
+        showToast(`Đã đồng bộ chân dung của ${name} vào Hồ sơ sắc diện!`);
+
+        // Auto-redirect to dossier after 1.8 seconds
+        setTimeout(() => {
+          window.location.href = 'dossier.html';
+        }, 1800);
+
+      }, 2100);
+    }
+
+    function resetScanner() {
+      scanningView.classList.add('hidden');
+      uploadView.classList.remove('hidden');
+      fileInput.value = '';
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const msg = document.getElementById('toastMessage');
+      if (!toast || !msg) return;
+      msg.textContent = message;
+      toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
+      }, 2500);
+    }
+
+    // Sync avatar on load if available
+    document.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('vibeColor_userProfile');
+      if (saved) {
+        try {
+          const profile = JSON.parse(saved);
+          if (profile.portraitUrl) {
+            const topNavAvatar = document.getElementById('topNavAvatar');
+            if (topNavAvatar) topNavAvatar.src = profile.portraitUrl;
+          }
+        } catch (e) { }
+      }
+    });
+  </script>
+</body>
+
+</html>
