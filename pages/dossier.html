@@ -80,8 +80,8 @@
           </button>
           <div class="flex items-center gap-space-xs pl-space-xs ml-space-xs">
             <div class="p-0.5 rounded-full bg-surface-container-high">
-              <img alt="Profile" class="w-8 h-8 rounded-full object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5z0qHnCuVIzvPZWsuQ7U80jughQQw0AxlWiC75dPSECLf6aX8e1ArHZwo0i8xzhFMyjVp_xq9_rUA15jrBaaAZBo_usxi6c__-w6RL0Wi9bAXzZFgGxA7suG53QSBuix8EFyfmPpS7mU0xqb9B-qySJ0dROxrKtF6yujOey4SneaIBZtwsJNUm4GUU8WtNdZz3bIzKQJJtyRTIQqp0rmu9DsjLGVlujVqV6yU5dbterbn1ff9-606">
+              <img id="topNavAvatar" alt="Profile" class="w-8 h-8 rounded-full object-cover"
+                src="../assets/images/portraits/thao_linh_soft_autumn.jpg">
             </div>
           </div>
         </div>
@@ -107,7 +107,7 @@
             </span>
           </div>
           <h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">
-            Bản Sắc Sắc Ký Của <span class="italic font-normal text-primary">Nguyễn Thảo Linh</span>
+            Bản Sắc Sắc Ký Của <span id="dossierUserName" class="italic font-normal text-primary">Nguyễn Thảo Linh</span>
           </h1>
         </div>
 
@@ -140,17 +140,23 @@
           <div class="lg:col-span-5 flex flex-col items-center">
             <div
               class="relative w-full max-w-sm rounded-2xl overflow-hidden shadow-2xl bg-surface-container group aspect-[4/5]">
-              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJh9P4p6HLeZATqCw7Z6cv5JZoPsdh-ir5zgtU3zOoRElnT0F1-ciZBcV3zI32tyGHgJMZKRIKwAXkbVQgPVNZsbdcv1mhMxyEbQL41M1W0hJq6pVqvU730f8dKxs9AJPvr59cIGlsvmKbHaSwxTDgZAE71xoGgynaUaK12m4449-1DSH-gsYF_f6ncn0qhKee6eiec5O1YNxt2XFxyXtEUcuBkIkGado1IJnJbxE4ywI_pQhxG6h0"
+              <img id="dossierPortrait" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                src="../assets/images/portraits/thao_linh_soft_autumn.jpg"
                 alt="Chân dung phân tích sắc diện của Nguyễn Thảo Linh - Soft Autumn">
 
               <!-- Season Badge (Top Left) -->
               <div
                 class="absolute top-4 left-4 z-10 px-space-md py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-sm">
-                <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold">
+                <span id="dossierSeasonBadge" class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold">
                   SOFT AUTUMN
                 </span>
               </div>
+
+              <!-- Quick Change Portrait Button (Top Right) -->
+              <a href="studio.html" class="absolute top-4 right-4 z-20 px-3 py-1 rounded-full bg-black/60 hover:bg-black/85 text-white font-label-sm text-[11px] backdrop-blur-md flex items-center gap-1 transition-all shadow-md">
+                <span class="material-symbols-outlined text-[14px]">photo_camera</span>
+                <span>Đổi ảnh</span>
+              </a>
 
               <!-- Optical Engine Pill (Bottom) -->
               <div
@@ -159,7 +165,7 @@
                   <span class="material-symbols-outlined text-primary text-[18px]">verified</span>
                   <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">HỆ QUANG PHỔ</span>
                 </div>
-                <span class="font-label-sm text-label-sm font-semibold text-primary">Melanin A Scale: 96.8%</span>
+                <span id="dossierMelanin" class="font-label-sm text-label-sm font-semibold text-primary">Melanin A Scale: 96.8%</span>
               </div>
             </div>
           </div>
@@ -184,7 +190,7 @@
               </div>
 
               <!-- Main Seasonal Title -->
-              <h2 class="font-headline-lg text-headline-lg-mobile md:text-display-lg text-on-surface mb-space-xs">
+              <h2 id="dossierSeasonTitle" class="font-headline-lg text-headline-lg-mobile md:text-display-lg text-on-surface mb-space-xs">
                 MÙA THU DỊU NHẸ
               </h2>
 
@@ -962,20 +968,48 @@
     /**
      * Display toast message
      */
-    function showToast(message) {
-      const toast = document.getElementById('toast');
-      const msg = document.getElementById('toastMessage');
-      if (!toast || !msg) return;
+    /**
+     * Synchronize profile data from Studio selection (localStorage)
+     */
+    function loadStoredProfile() {
+      const saved = localStorage.getItem('vibeColor_userProfile');
+      const portraitEl = document.getElementById('dossierPortrait');
+      const nameEl = document.getElementById('dossierUserName');
+      const topAvatar = document.getElementById('topNavAvatar');
+      const badgeEl = document.getElementById('dossierSeasonBadge');
+      const titleEl = document.getElementById('dossierSeasonTitle');
+      const melaninEl = document.getElementById('dossierMelanin');
 
-      msg.textContent = message;
-      toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
-      toast.classList.add('opacity-100', 'translate-y-0');
-
-      setTimeout(() => {
-        toast.classList.remove('opacity-100', 'translate-y-0');
-        toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
-      }, 2500);
+      if (saved) {
+        try {
+          const profile = JSON.parse(saved);
+          if (profile.portraitUrl) {
+            if (portraitEl) portraitEl.src = profile.portraitUrl;
+            if (topAvatar) topAvatar.src = profile.portraitUrl;
+          }
+          if (profile.name && nameEl) {
+            nameEl.textContent = profile.name;
+          }
+          if (profile.seasonKey && badgeEl) {
+            badgeEl.textContent = profile.seasonKey.toUpperCase();
+          }
+          if (profile.seasonTitle && titleEl) {
+            titleEl.textContent = profile.seasonTitle.toUpperCase();
+          }
+          if (profile.melanin && melaninEl) {
+            melaninEl.textContent = `Melanin A Scale: ${profile.melanin}`;
+          }
+        } catch (e) {
+          console.error('Error loading stored profile:', e);
+        }
+      } else {
+        // Fallback default
+        if (portraitEl) portraitEl.src = '../assets/images/portraits/thao_linh_soft_autumn.jpg';
+        if (topAvatar) topAvatar.src = '../assets/images/portraits/thao_linh_soft_autumn.jpg';
+      }
     }
+
+    document.addEventListener('DOMContentLoaded', loadStoredProfile);
   </script>
 </body>
 
