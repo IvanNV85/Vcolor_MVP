@@ -52,7 +52,7 @@ VcolorMVP/
 
 ### Cách 1: Sử dụng VS Code Live Server (Khuyên dùng)
 1. Cài extension **Live Server** trên VS Code.
-2. Click chuột phải vào file `home_page.html` chọn **Open with Live Server** (Port `5500`).
+2. Click chuột phải vào file `index.html` chọn **Open with Live Server** (Port `5500`).
 
 ### Cách 2: Chạy qua Python HTTP Server
 ```bash
@@ -61,7 +61,7 @@ python -m http.server 3000
 ```
 
 ### Cách 3: Mở trực tiếp file
-- Bạn có thể nhấp đúp trực tiếp vào `home_page.html` để mở trên bất kỳ trình duyệt nào. Mọi script đã được cấu trúc để tương thích hoàn toàn kể cả khi mở qua giao thức `file:///`.
+- Bạn có thể nhấp đúp trực tiếp vào `index.html` để mở trên bất kỳ trình duyệt nào. Mọi script đã được cấu trúc để tương thích hoàn toàn kể cả khi mở qua giao thức `file:///`.
 
 ---
 
