@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="vi">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Bản Sắc Sắc Ký Của Nguyễn Thảo Linh — Vibe Color</title>
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Material Symbols Outlined -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet">
+
+  <!-- Main CSS Reset & Tailwind CDN -->
+  <link rel="stylesheet" href="../css/main.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../js/config/tailwind.config.js"></script>
+</head>
+
+<body
+  class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+
+  <!-- ========================================================================
+       TOP FIXED NAVIGATION BAR
+       ======================================================================== -->
+  <header
+    class="fixed top-0 left-0 right-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_12px_rgba(31,27,24,0.03)]">
+    <div class="h-20 w-full px-margin flex items-center justify-between gap-gutter">
+
+      <!-- Brand Logo -->
+      <a href="../home_page.html" class="flex items-center gap-space-md shrink-0">
+        <img alt="Vibe Color Logo" class="h-8 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh9-t9LJmg-xmOC_87FTKGngybQIMCyPJTeFO6_URin3rpKCIOhrUtUeh6aAA58fS4Oipi4VbUjVoa511wMonafICTKP_TAFF8Vlat2EtsJ-YXMbKLpakW9iN9BrF4puWiS7s0n662v4UXK1prBq5YlfYLuX_kU7lfSz7SSyB2iVDgPCpZeipATmHNB4K7Wvi40_ZKj3vaSAPf3AStXcaIzaTUsEoFpzeOUAZHHe17dM3LrO9kGw8o">
+        <div class="flex flex-col">
+          <span class="font-headline-sm text-headline-sm text-primary tracking-wide leading-none">Vibe Color</span>
+          <span class="font-label-sm text-label-sm text-outline tracking-widest uppercase mt-0.5">Haute
+            Colorimetrie</span>
+        </div>
+      </a>
+
+      <!-- Main Navigation Menu -->
+      <nav class="hidden xl:flex items-center gap-space-xs p-space-xs bg-surface-container-low rounded-full">
+        <a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all duration-300"
+          href="../home_page.html">Trang chủ &amp; Khám phá</a>
+        <a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all duration-300"
+          href="studio.html">Studio Phân tích AI</a>
+        <a class="px-space-md py-space-xs rounded-full font-label-md text-label-md bg-secondary-container text-on-secondary-container font-semibold shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)]"
+          href="dossier.html">Hồ sơ Sắc diện</a>
+        <a class="px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all duration-300"
+          href="cosmetics.html">Trợ lý Mỹ phẩm</a>
+      </nav>
+
+      <!-- Right Action Items -->
+      <div class="flex items-center gap-space-md shrink-0">
+        <a class="hidden md:inline-flex items-center justify-center px-space-lg py-space-sm rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md tracking-wider uppercase transition-all duration-300 hover:bg-primary hover:text-on-primary shadow-[0_4px_16px_-2px_rgba(197,160,89,0.35)]"
+          href="studio.html">
+          Bắt đầu Phân tích
+        </a>
+
+        <div class="flex items-center gap-space-xs pl-space-xs">
+          <button aria-label="Mục đã lưu"
+            class="w-9 h-9 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"
+            type="button">
+            <span class="material-symbols-outlined text-[20px]">bookmark</span>
+          </button>
+          <button aria-label="Thông báo"
+            class="w-9 h-9 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative"
+            type="button">
+            <span class="material-symbols-outlined text-[20px]">notifications</span>
+            <span class="absolute top-2 right-2 w-1.5 h-1.5 rounded-full bg-primary"></span>
+          </button>
+          <div class="flex items-center gap-space-xs pl-space-xs ml-space-xs">
+            <div class="p-0.5 rounded-full bg-surface-container-high">
+              <img alt="Profile" class="w-8 h-8 rounded-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5z0qHnCuVIzvPZWsuQ7U80jughQQw0AxlWiC75dPSECLf6aX8e1ArHZwo0i8xzhFMyjVp_xq9_rUA15jrBaaAZBo_usxi6c__-w6RL0Wi9bAXzZFgGxA7suG53QSBuix8EFyfmPpS7mU0xqb9B-qySJ0dROxrKtF6yujOey4SneaIBZtwsJNUm4GUU8WtNdZz3bIzKQJJtyRTIQqp0rmu9DsjLGVlujVqV6yU5dbterbn1ff9-606">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN DOSSIER CONTENT
+       ======================================================================== -->
+  <main class="w-full pt-28 pb-space-xl min-h-screen">
+    <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin flex flex-col gap-space-xl">
+
+      <!-- ====================================================================
+           1. DOSSIER HEADER & METADATA BAR
+           ==================================================================== -->
+      <section
+        class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm border-b border-outline-variant/30 pb-space-md">
+        <div>
+          <div class="flex items-center gap-space-xs mb-space-xs">
+            <span class="font-label-sm text-label-sm text-outline uppercase tracking-widest">
+              HỒ SƠ SẮC KÝ CÁ NHÂN • MÃ LƯU TRỮ: #LP-89240
+            </span>
+          </div>
+          <h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">
+            Bản Sắc Sắc Ký Của <span class="italic font-normal text-primary">Nguyễn Thảo Linh</span>
+          </h1>
+        </div>
+
+        <div
+          class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-low border border-outline-variant/20 shadow-xs">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span class="font-label-sm text-label-sm text-on-surface-variant font-medium">
+            Đã Chuẩn Hóa Phổ Quang • Hôm nay
+          </span>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           2. HERO DIAGNOSTIC PROFILE CARD (GRADIENT SOFT PEACH GLOW)
+           ==================================================================== -->
+      <section
+        class="relative rounded-3xl bg-gradient-to-br from-secondary-container/40 via-surface-container-low/70 to-surface-container-lowest p-space-md md:p-space-xl border border-outline-variant/30 shadow-lg overflow-hidden">
+
+        <!-- Ambient Background Glow -->
+        <div
+          class="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-primary-fixed-dim/20 blur-3xl pointer-events-none">
+        </div>
+        <div
+          class="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-secondary-container/50 blur-3xl pointer-events-none">
+        </div>
+
+        <div class="relative grid grid-cols-1 lg:grid-cols-12 gap-gutter items-stretch">
+
+          <!-- Left Column: Portrait Showcase -->
+          <div class="lg:col-span-5 flex flex-col items-center">
+            <div
+              class="relative w-full max-w-sm rounded-2xl overflow-hidden shadow-2xl bg-surface-container group aspect-[4/5]">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJh9P4p6HLeZATqCw7Z6cv5JZoPsdh-ir5zgtU3zOoRElnT0F1-ciZBcV3zI32tyGHgJMZKRIKwAXkbVQgPVNZsbdcv1mhMxyEbQL41M1W0hJq6pVqvU730f8dKxs9AJPvr59cIGlsvmKbHaSwxTDgZAE71xoGgynaUaK12m4449-1DSH-gsYF_f6ncn0qhKee6eiec5O1YNxt2XFxyXtEUcuBkIkGado1IJnJbxE4ywI_pQhxG6h0"
+                alt="Chân dung phân tích sắc diện của Nguyễn Thảo Linh - Soft Autumn">
+
+              <!-- Season Badge (Top Left) -->
+              <div
+                class="absolute top-4 left-4 z-10 px-space-md py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-sm">
+                <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold">
+                  SOFT AUTUMN
+                </span>
+              </div>
+
+              <!-- Optical Engine Pill (Bottom) -->
+              <div
+                class="absolute bottom-4 left-4 right-4 z-10 px-space-md py-space-xs rounded-xl bg-surface/90 backdrop-blur-md shadow-md flex items-center justify-between">
+                <div class="flex items-center gap-space-xs">
+                  <span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+                  <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">HỆ QUANG PHỔ</span>
+                </div>
+                <span class="font-label-sm text-label-sm font-semibold text-primary">Melanin A Scale: 96.8%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Seasonal Classification & Metrics -->
+          <div class="lg:col-span-7 flex flex-col justify-between pt-space-sm lg:pt-0">
+            <div>
+              <!-- Category Badges Bar -->
+              <div class="flex flex-wrap items-center gap-space-xs mb-space-sm">
+                <span
+                  class="px-space-md py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm tracking-wider uppercase font-semibold">
+                  THU TRẦM ẤM • SOFT AUTUMN
+                </span>
+                <span
+                  class="px-space-md py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm tracking-wider uppercase">
+                  ĐỘ TƯƠNG PHẢN: TRUNG BÌNH - DỊU (LOW-MID)
+                </span>
+                <span
+                  class="px-space-md py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm tracking-wider uppercase font-semibold">
+                  MÙA SẮC CHỦ TRỊ
+                </span>
+              </div>
+
+              <!-- Main Seasonal Title -->
+              <h2 class="font-headline-lg text-headline-lg-mobile md:text-display-lg text-on-surface mb-space-xs">
+                MÙA THU DỊU NHẸ
+              </h2>
+
+              <!-- Romantic Quote -->
+              <p class="font-headline-sm text-headline-sm italic text-primary font-normal mb-space-sm">
+                "Vẻ đẹp thanh tao, quý phái rất chiêm sâu lên ấp tự nhiên"
+              </p>
+
+              <!-- Description -->
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+                Sắc tố da của bạn sở hữu tầng vi mạch ấm (<strong class="text-on-surface font-semibold">Warm
+                  Undertone</strong>) hòa quyện hoàn hảo cùng dải phổ màu be mật nhạt đặc trưng của mùa thu chuyển giao.
+                Thay vì những gam màu quá chói lọi hoặc lạnh buốt, thần thái của bạn tỏa sáng rạng ngời nhất trong các
+                dải màu có pha sắc xám tro ấm, màu đất nung mượt mà và vàng rơm dịu dàng.
+              </p>
+            </div>
+
+            <!-- 3 Optical Metric Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm my-space-md">
+
+              <!-- Metric 1 -->
+              <div
+                class="p-space-md rounded-2xl bg-surface-container-lowest/85 backdrop-blur-sm border border-outline-variant/30 shadow-xs flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-space-xs">
+                    <span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">SẮC TỐ DA
+                      (UNDERTONE)</span>
+                    <span class="material-symbols-outlined text-amber-600 text-[18px]">wb_sunny</span>
+                  </div>
+                  <h4 class="font-headline-sm text-headline-sm text-on-surface mb-1">Ấm Áp (Warm)</h4>
+                </div>
+                <p class="font-body-sm text-[12px] text-on-surface-variant mt-space-xs">
+                  Sắc tố Carotenoid &amp; Melanin ấm chiếm ưu thế
+                </p>
+              </div>
+
+              <!-- Metric 2 -->
+              <div
+                class="p-space-md rounded-2xl bg-surface-container-lowest/85 backdrop-blur-sm border border-outline-variant/30 shadow-xs flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-space-xs">
+                    <span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">ĐỘ TRONG / ĐỤC
+                      (CHROMA)</span>
+                    <span class="material-symbols-outlined text-secondary text-[18px]">water_drop</span>
+                  </div>
+                  <h4 class="font-headline-sm text-headline-sm text-on-surface mb-1">Dịu Nhẹ (Muted)</h4>
+                </div>
+                <p class="font-body-sm text-[12px] text-on-surface-variant mt-space-xs">
+                  Sắc đục pha khói êm dịu, không chói gắt
+                </p>
+              </div>
+
+              <!-- Metric 3 -->
+              <div
+                class="p-space-md rounded-2xl bg-surface-container-lowest/85 backdrop-blur-sm border border-outline-variant/30 shadow-xs flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-space-xs">
+                    <span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">ĐỘ SÁNG (VALUE)</span>
+                    <span class="material-symbols-outlined text-primary text-[18px]">tune</span>
+                  </div>
+                  <h4 class="font-headline-sm text-headline-sm text-on-surface mb-1">Trung Bình Ấm</h4>
+                </div>
+                <p class="font-body-sm text-[12px] text-on-surface-variant mt-space-xs">
+                  Hài hòa giữa tone da và màu tóc sáng ngời
+                </p>
+              </div>
+            </div>
+
+            <!-- Action Buttons Group -->
+            <div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+              <button onclick="window.print()"
+                class="inline-flex items-center justify-center gap-space-xs px-space-lg py-space-sm rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md uppercase tracking-wider hover:bg-primary hover:text-on-primary transition-all shadow-md hover:shadow-lg"
+                type="button">
+                <span class="material-symbols-outlined text-[18px]">download</span>
+                <span>TẢI BEAUTY CARD (GÓI VÀNG)</span>
+              </button>
+
+              <button onclick="alert('Đã tạo liên kết thẻ Apple Wallet cho mã #LP-89240.')"
+                class="inline-flex items-center justify-center gap-space-xs px-space-lg py-space-sm rounded-full bg-[#1F1B18] text-white font-label-md text-label-md uppercase tracking-wider hover:bg-black transition-all shadow-md"
+                type="button">
+                <span class="material-symbols-outlined text-[18px]">account_balance_wallet</span>
+                <span>LƯU VÀO APPLE WALLET</span>
+              </button>
+
+              <button onclick="copyShareLink()"
+                class="inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors border border-outline-variant/30"
+                type="button">
+                <span class="material-symbols-outlined text-[18px]">share</span>
+                <span>Chia Sẻ Kết Quả</span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           3. BẢNG MÀU HOÀNG KIM VS MÀU CẦN TRÁNH (SIGNATURE PALETTE)
+           ==================================================================== -->
+      <section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+
+        <!-- Left: Bảng Màu Hoàng Kim (8 Columns) -->
+        <div class="lg:col-span-8 flex flex-col gap-space-md">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-xs">
+            <div>
+              <span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-1">
+                SIGNATURE CHROMATOLOGY
+              </span>
+              <h3 class="font-headline-lg text-headline-lg text-on-surface">
+                Bảng Màu Hoàng Kim (Best Signature Colors)
+              </h3>
+            </div>
+            <span class="font-body-sm text-[12px] text-outline">
+              Chạm vào màu để sao chép mã HEX &amp; chất liệu
+            </span>
+          </div>
+
+          <!-- 8 Color Swatches Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm">
+
+            <!-- Swatch 1 -->
+            <div onclick="copyHex('#E07A5F', 'Terracotta Peach')"
+              class="group p-space-sm rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:border-primary/40 shadow-xs hover:shadow-md transition-all cursor-pointer flex flex-col justify-between">
+              <div class="w-full h-24 rounded-xl shadow-inner mb-space-sm transition-transform group-hover:scale-[1.02]"
+                style="background-color: #E07A5F;"></div>
+              <div>
+                <h5 class="font-headline-sm text-[16px] text-on-surface font-semibold leading-tight">Terracotta Peach
+                </h5>
+                <span class="font-label-sm text-outline tracking-wider uppercase block my-0.5">#E07A5F</span>
+                <span class="font-body-sm text-[12px] text-on-surface-variant block">Lụa Satin, Voan Cát</span>
+              </div>
+            </div>
+
+            <!-- Swatch 2 -->
+            <div onclick="copyHex('#D4A373', 'Warm Sand')"
+              class="group p-space-sm rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:border-primary/40 shadow-xs hover:shadow-md transition-all cursor-pointer flex flex-col justify-between">
+              <div class="w-full h-24 rounded-xl shadow-inner mb-space-sm transition-transform group-hover:scale-[1.02]"
+                style="background-color: #D4A373;"></div>
+              <div>
+                <h5 class="font-headline-sm text-[16px] text-on-surface font-semibold leading-tight">Warm Sand</h5>
+                <span class="font-label-sm text-outline tracking-wider uppercase block my-0.5">#D4A373</span>
+                <span class="font-body-sm text-[12px] text-on-surface-variant block">Cashmere, Lanh Dệt Kim</span>
+              </div>
+            </div>
+
+            <!-- Swatch 3 -->
+            <div onclick="copyHex('#6B705C', 'Dusty Olive')"
+              class="group p-space-sm rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:border-primary/40 shadow-xs hover:shadow-md transition-all cursor-pointer flex flex-col justify-between">
+              <div class="w-full h-24 rounded-xl shadow-inner mb-space-sm transition-transform group-hover:scale-[1.02]"
+                style="background-color: #6B705C;"></div>
+              <div>
+                <h5 class="font-headline-sm text-[16px] text-on-surface font-semibold leading-tight">Dusty Olive</h5>
+                <span class="font-label-sm text-outline tracking-wider uppercase block my-0.5">#6B705C</span>
+                <span class="font-body-sm text-[12px] text-on-surface-variant block">Kaki Nhung, Nỉ Khởi</span>
+              </div>
+            </div>
+
+            <!-- Swatch 4 -->
+            <div onclick="copyHex('#BC6C25', 'Burnt Sienna')"
+              class="group p-space-sm rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:border-primary/40 shadow-xs hover:shadow-md transition-all cursor-pointer flex flex-col justify-between">
+              <div class="w-full h-24 rounded-xl shadow-inner mb-space-sm transition-transform group-hover:scale-[1.02]"
+                style="background-color: #BC6C25;"></div>
+              <div>
+                <h5 class="font-headline-sm text-[16px] text-on-surface font-semibold leading-tight">Burnt Sienna</h5>
+                <span class="font-label-sm text-outline tracking-wider uppercase block my-0.5">#BC6C25</span>
+                <span class="font-body-sm text-[12px] text-on-surface-variant block">Da Lộn, Nhung Kẻ</span>
+              </div>
+            </div>
+
+            <!-- Swatch 5 -->
+            <div onclick="copyHex('#8F5973', 'Muted Plum')"
+              class="group p-space-sm rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:border-primary/40 shadow-xs hover:shadow-md transition-all cursor-pointer flex flex-col justify-between">
+              <div class="w-full h-24 rounded-xl shadow-inner mb-space-sm transition-transform group-hover:scale-[1.02]"
+                style="background-color: #8F5973;"></div>
+              <div>
+                <h5 class="font-headline-sm text-[16px] text-on-surface font-semibold leading-tight">Muted Plum</h5>
+                <span class="font-label-sm text-outline tracking-wider uppercase block my-0.5">#8F5973</span>
+                <span class="font-body-sm text-[12px] text-on-surface-variant block">Tơ Chiffon, Lụa Gấm</span>
+              </div>
+            </div>
+
+            <!-- Swatch 6 -->
+            <div onclick="copyHex('#DDA15E', 'Golden Ochre')"
+              class="group p-space-sm rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:border-primary/40 shadow-xs hover:shadow-md transition-all cursor-pointer flex flex-col justify-between">
+              <div class="w-full h-24 rounded-xl shadow-inner mb-space-sm transition-transform group-hover:scale-[1.02]"
+                style="background-color: #DDA15E;"></div>
+              <div>
+                <h5 class="font-headline-sm text-[16px] text-on-surface font-semibold leading-tight">Golden Ochre</h5>
+                <span class="font-label-sm text-outline tracking-wider uppercase block my-0.5">#DDA15E</span>
+                <span class="font-body-sm text-[12px] text-on-surface-variant block">Dạ Tweed, Len Dày</span>
+              </div>
+            </div>
+
+            <!-- Swatch 7 -->
+            <div onclick="copyHex('#FAEDCD', 'Warm Ivory')"
+              class="group p-space-sm rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:border-primary/40 shadow-xs hover:shadow-md transition-all cursor-pointer flex flex-col justify-between">
+              <div class="w-full h-24 rounded-xl shadow-inner mb-space-sm transition-transform group-hover:scale-[1.02]"
+                style="background-color: #FAEDCD; border: 1px solid rgba(0,0,0,0.05);"></div>
+              <div>
+                <h5 class="font-headline-sm text-[16px] text-on-surface font-semibold leading-tight">Warm Ivory</h5>
+                <span class="font-label-sm text-outline tracking-wider uppercase block my-0.5">#FAEDCD</span>
+                <span class="font-body-sm text-[12px] text-on-surface-variant block">Tweed Dệt Thô, Cotton</span>
+              </div>
+            </div>
+
+            <!-- Swatch 8 -->
+            <div onclick="copyHex('#97A97C', 'Sage Mist')"
+              class="group p-space-sm rounded-2xl bg-surface-container-lowest border border-outline-variant/30 hover:border-primary/40 shadow-xs hover:shadow-md transition-all cursor-pointer flex flex-col justify-between">
+              <div class="w-full h-24 rounded-xl shadow-inner mb-space-sm transition-transform group-hover:scale-[1.02]"
+                style="background-color: #97A97C;"></div>
+              <div>
+                <h5 class="font-headline-sm text-[16px] text-on-surface font-semibold leading-tight">Sage Mist</h5>
+                <span class="font-label-sm text-outline tracking-wider uppercase block my-0.5">#97A97C</span>
+                <span class="font-body-sm text-[12px] text-on-surface-variant block">Tencel Lụa, Len Cashmere</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Màu Cần Tránh (Caution Palette - 4 Columns) -->
+        <div class="lg:col-span-4 flex flex-col gap-space-md">
+          <div>
+            <span class="font-label-sm text-label-sm text-error uppercase tracking-widest block mb-1">
+              PHỔ MÀU TƯƠNG KHẮC
+            </span>
+            <h3 class="font-headline-lg text-headline-lg text-on-surface">
+              Màu Cần Tránh (Caution Palette)
+            </h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Các sắc độ cực đoan dễ triệt tiêu quầng sáng tự nhiên và làm xỉn da của sắc diện Soft Autumn.
+            </p>
+          </div>
+
+          <!-- 3 Warning Cards -->
+          <div class="flex flex-col gap-space-sm">
+
+            <!-- Warning 1: Neon Pink -->
+            <div
+              class="p-space-sm rounded-2xl bg-surface-container-lowest border border-error/20 shadow-xs flex items-start gap-space-sm">
+              <div class="w-12 h-12 rounded-xl shrink-0 flex items-center justify-center text-white shadow-inner"
+                style="background-color: #FF007F;">
+                <span class="material-symbols-outlined text-[20px]">close</span>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <h5 class="font-label-md text-label-md text-on-surface font-bold">Neon Electric Pink</h5>
+                  <span class="font-label-sm text-[10px] text-outline">#FF007F</span>
+                </div>
+                <p class="font-body-sm text-[12px] text-on-surface-variant mt-1 leading-snug">
+                  Lấn át tone da ấm, tăng sắc tố xám dưới bọng mắt và làm vẻ đẹp giảm đi rạng ngời.
+                </p>
+              </div>
+            </div>
+
+            <!-- Warning 2: Icy Blue -->
+            <div
+              class="p-space-sm rounded-2xl bg-surface-container-lowest border border-error/20 shadow-xs flex items-start gap-space-sm">
+              <div class="w-12 h-12 rounded-xl shrink-0 flex items-center justify-center text-white shadow-inner"
+                style="background-color: #A0C4FF;">
+                <span class="material-symbols-outlined text-[20px]">close</span>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <h5 class="font-label-md text-label-md text-on-surface font-bold">Icy Silver Blue</h5>
+                  <span class="font-label-sm text-[10px] text-outline">#A0C4FF</span>
+                </div>
+                <p class="font-body-sm text-[12px] text-on-surface-variant mt-1 leading-snug">
+                  Ánh lam băng giá hút cạn sắc tố ấm, khiến làn da trở nên nhợt nhạt, mệt mỏi thiếu sức sống.
+                </p>
+              </div>
+            </div>
+
+            <!-- Warning 3: Pure Black -->
+            <div
+              class="p-space-sm rounded-2xl bg-surface-container-lowest border border-error/20 shadow-xs flex items-start gap-space-sm">
+              <div class="w-12 h-12 rounded-xl shrink-0 flex items-center justify-center text-white shadow-inner"
+                style="background-color: #000000;">
+                <span class="material-symbols-outlined text-[20px]">close</span>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <h5 class="font-label-md text-label-md text-on-surface font-bold">Pure Stiff Black</h5>
+                  <span class="font-label-sm text-[10px] text-outline">#000000</span>
+                </div>
+                <p class="font-body-sm text-[12px] text-on-surface-variant mt-1 leading-snug">
+                  Màu đen tuyền tạo cảm giác nặng nề, lấn át đường nét mềm mại (thay thế bằng Nâu Espresso #2B1810).
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Recommendation Alert Box -->
+          <div
+            class="p-space-sm rounded-xl bg-surface-container-low border border-outline-variant/30 flex items-start gap-space-xs text-on-surface-variant">
+            <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">lightbulb</span>
+            <span class="font-body-sm text-[12px] leading-relaxed">
+              <strong>Quy tắc vàng:</strong> Luôn ưu tiên độ pha khói và độ nghiêng tone ấm thay vì các màu nguyên bản
+              (pure spectrum).
+            </span>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- ====================================================================
+           4. CẨM NANG TRANG ĐIỂM CHUYÊN BIỆT (DETAILED MAKEUP RECIPE)
+           ==================================================================== -->
+      <section class="flex flex-col gap-space-md">
+
+        <div>
+          <span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block mb-1">
+            MAISON EDITORIAL MAKEUP GUIDE
+          </span>
+          <h3 class="font-headline-lg text-headline-lg text-on-surface mb-space-xs">
+            Cẩm Nang Trang Điểm Chuyên Biệt (Detailed Makeup Recipe)
+          </h3>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-3xl leading-relaxed">
+            Phác thảo định dạng cấu trúc sắc tố toàn diện dành riêng cho quý cô Soft Autumn: từ son môi gạch, má hồng
+            hoàng hôn, phấn mắt bột mịn đến trang sức kim hoàn và ánh tóc rạng ngời.
+          </p>
+        </div>
+
+        <!-- 6 Specialized Cosmetic Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+
+          <!-- Card 1: Bảng Son Môi Chân Ái -->
+          <div
+            class="p-space-md rounded-2xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/20 mb-space-sm">
+                <span class="font-label-sm text-[11px] text-primary uppercase tracking-widest">NGHI THỨC ĐÔI MÔI</span>
+                <span class="material-symbols-outlined text-outline text-[18px]">brush</span>
+              </div>
+              <h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Bảng Son Môi Chân Ái</h4>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Tuyệt đối tránh son neon bóng hoặc hồng cánh sen. Chọn chất son satin hoặc nhung lì.
+              </p>
+
+              <!-- Color List -->
+              <div class="flex flex-col gap-space-xs mb-space-md">
+                <div class="flex items-center justify-between p-space-xs rounded-lg bg-surface-container-low">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="w-4 h-4 rounded-full shadow-inner" style="background-color: #B85B35;"></span>
+                    <span class="font-label-md text-label-md text-on-surface">Cam Đất Cháy (Burnt Terracotta)</span>
+                  </div>
+                  <span class="font-label-sm text-outline">Hợp nhất: Satin</span>
+                </div>
+
+                <div class="flex items-center justify-between p-space-xs rounded-lg bg-surface-container-low">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="w-4 h-4 rounded-full shadow-inner" style="background-color: #993D2C;"></span>
+                    <span class="font-label-md text-label-md text-on-surface">Đỏ Gạch Muted (Brick Ochre)</span>
+                  </div>
+                  <span class="font-label-sm text-outline">Matte Nhung</span>
+                </div>
+
+                <div class="flex items-center justify-between p-space-xs rounded-lg bg-surface-container-low">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="w-4 h-4 rounded-full shadow-inner" style="background-color: #D48372;"></span>
+                    <span class="font-label-md text-label-md text-on-surface">Hồng Nude Đào (Muted Peachy Nude)</span>
+                  </div>
+                  <span class="font-label-sm text-outline">Semi-Matte</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-space-xs border-t border-outline-variant/20 flex items-center justify-between text-outline">
+              <span class="font-label-sm text-[11px]">Kết cấu khuyên dùng:</span>
+              <span class="font-label-sm text-[11px] text-primary font-semibold">Velvet Satin / Matte Nhung Mịn</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Má Hồng & Tạo Khối -->
+          <div
+            class="p-space-md rounded-2xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/20 mb-space-sm">
+                <span class="font-label-sm text-[11px] text-primary uppercase tracking-widest">GÒ MÁ &amp; DIỆN
+                  KHỐI</span>
+                <span class="material-symbols-outlined text-outline text-[18px]">auto_fix_high</span>
+              </div>
+              <h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Má Hồng &amp; Tạo Khối</h4>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Tạo hiệu ứng gò má ửng nắng ấm áp chuẩn hoàng hôn miền nước Ý rực rỡ.
+              </p>
+
+              <!-- Color List -->
+              <div class="flex flex-col gap-space-xs mb-space-md">
+                <div class="p-space-xs rounded-lg bg-surface-container-low">
+                  <div class="flex items-center justify-between mb-1">
+                    <span class="font-label-md text-label-md text-on-surface font-semibold">Warm Apricot (Má Hồng
+                      Ấm)</span>
+                    <span class="w-4 h-4 rounded-full shadow-inner" style="background-color: #E89F82;"></span>
+                  </div>
+                  <p class="font-body-sm text-[12px] text-on-surface-variant">
+                    Tán nhẹ gò má hướng về thái dương để tạo độ nâng và rạng rỡ tự nhiên.
+                  </p>
+                </div>
+
+                <div class="p-space-xs rounded-lg bg-surface-container-low">
+                  <div class="flex items-center justify-between mb-1">
+                    <span class="font-label-md text-label-md text-on-surface font-semibold">Honey Bronzer (Khối Mạch
+                      Nha)</span>
+                    <span class="w-4 h-4 rounded-full shadow-inner" style="background-color: #C68B59;"></span>
+                  </div>
+                  <p class="font-body-sm text-[12px] text-on-surface-variant">
+                    Tạo khối viền hàm &amp; sống mũi, ấm áp mềm mại không bị xỉn vệt xám.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-space-xs border-t border-outline-variant/20 flex items-center gap-1 text-error">
+              <span class="material-symbols-outlined text-[14px]">warning</span>
+              <span class="font-label-sm text-[11px]">Tránh má hồng baby hồng tím lạnh hoặc hồng huỳnh quang.</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Phấn Mắt Hoàng Kim -->
+          <div
+            class="p-space-md rounded-2xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/20 mb-space-sm">
+                <span class="font-label-sm text-[11px] text-primary uppercase tracking-widest">CỬA SỔ TÂM HỒN</span>
+                <span class="material-symbols-outlined text-outline text-[18px]">visibility</span>
+              </div>
+              <h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Phấn Mắt Hoàng Kim</h4>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Ánh kim bóng gợi nhớ bức tranh sơn dầu cổ kính và champagne sủi tăm ấm mịn.
+              </p>
+
+              <!-- Triple Swatch Preview -->
+              <div class="grid grid-cols-3 gap-space-xs mb-space-md">
+                <div class="p-space-xs rounded-lg bg-surface-container-low text-center flex flex-col items-center">
+                  <span class="w-6 h-6 rounded-full shadow-inner mb-1" style="background-color: #8D5B4C;"></span>
+                  <span class="font-label-sm text-[11px] text-on-surface font-semibold">Nâu Hạt Dẻ</span>
+                  <span class="font-label-sm text-[10px] text-outline">Chestnut</span>
+                </div>
+
+                <div class="p-space-xs rounded-lg bg-surface-container-low text-center flex flex-col items-center">
+                  <span class="w-6 h-6 rounded-full shadow-inner mb-1" style="background-color: #D4AF37;"></span>
+                  <span class="font-label-sm text-[11px] text-on-surface font-semibold">Champagne Ấm</span>
+                  <span class="font-label-sm text-[10px] text-outline">Warm Shimmer</span>
+                </div>
+
+                <div class="p-space-xs rounded-lg bg-surface-container-low text-center flex flex-col items-center">
+                  <span class="w-6 h-6 rounded-full shadow-inner mb-1" style="background-color: #4A5D4E;"></span>
+                  <span class="font-label-sm text-[11px] text-on-surface font-semibold">Rêu Khói</span>
+                  <span class="font-label-sm text-[10px] text-outline">Earthy Sage</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-space-xs border-t border-outline-variant/20 flex items-center justify-between text-outline">
+              <span class="font-label-sm text-[11px]">Kẻ mắt &amp; Mascara:</span>
+              <span class="font-label-sm text-[11px] text-primary font-semibold">Nâu Espresso / Nâu Đen</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Trang Sức & Phụ Kiện -->
+          <div
+            class="p-space-md rounded-2xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/20 mb-space-sm">
+                <span class="font-label-sm text-[11px] text-primary uppercase tracking-widest">KIM HOÀN THƯỢNG
+                  HẠNG</span>
+                <span class="material-symbols-outlined text-outline text-[18px]">diamond</span>
+              </div>
+              <h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Trang Sức &amp; Phụ Kiện</h4>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Nhân tố tôn vinh ánh sáng kim loại tương quan tuyệt đối với tone da của bạn.
+              </p>
+
+              <div class="flex flex-col gap-space-xs mb-space-md">
+                <div class="p-space-xs rounded-lg bg-surface-container-low flex items-start gap-space-xs">
+                  <span class="material-symbols-outlined text-amber-500 text-[18px] shrink-0 mt-0.5">verified</span>
+                  <div>
+                    <h5 class="font-label-md text-label-md text-on-surface font-semibold">Vàng 18K Yellow Gold</h5>
+                    <p class="font-body-sm text-[12px] text-on-surface-variant">Tôn vinh làn da ấm áp và hài hòa hoàn
+                      hảo với undertone ấm.</p>
+                  </div>
+                </div>
+
+                <div class="p-space-xs rounded-lg bg-surface-container-low flex items-start gap-space-xs">
+                  <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">verified</span>
+                  <div>
+                    <h5 class="font-label-md text-label-md text-on-surface font-semibold">Vàng Champagne 14K &amp; Rose
+                      Gold Ấm</h5>
+                    <p class="font-body-sm text-[12px] text-on-surface-variant">Tinh tế, sang trọng, mang lại chiều sâu
+                      cao cấp.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-space-xs border-t border-outline-variant/20 flex items-center justify-between text-outline">
+              <span class="font-label-sm text-[11px]">Tránh đeo:</span>
+              <span class="font-label-sm text-[11px] text-error font-semibold">Bạc Trắng &amp; Bạch Kim Lạnh</span>
+            </div>
+          </div>
+
+          <!-- Card 5: Màu Tóc Lý Tưởng -->
+          <div
+            class="p-space-md rounded-2xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/20 mb-space-sm">
+                <span class="font-label-sm text-[11px] text-primary uppercase tracking-widest">MÀU NẮNG / TÓC</span>
+                <span class="material-symbols-outlined text-outline text-[18px]">face</span>
+              </div>
+              <h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Màu Tóc Lý Tưởng</h4>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Khung diện mạo nên giữ nét đằm ấm tự nhiên làm sáng khung xương gò má.
+              </p>
+
+              <div class="flex flex-col gap-space-xs mb-space-md">
+                <div class="flex items-center justify-between p-space-xs rounded-lg bg-surface-container-low">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="w-3.5 h-3.5 rounded-full" style="background-color: #4A2E1B;"></span>
+                    <span class="font-label-md text-label-md text-on-surface">Nâu Hạt Dẻ Trầm (Chestnut)</span>
+                  </div>
+                  <span class="font-label-sm text-primary font-semibold">#1 Tự Nhiên</span>
+                </div>
+
+                <div class="flex items-center justify-between p-space-xs rounded-lg bg-surface-container-low">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="w-3.5 h-3.5 rounded-full" style="background-color: #794424;"></span>
+                    <span class="font-label-md text-label-md text-on-surface">Nâu Caramel Mật Ong</span>
+                  </div>
+                  <span class="font-label-sm text-outline">Balayage Nhẹ</span>
+                </div>
+
+                <div class="flex items-center justify-between p-space-xs rounded-lg bg-surface-container-low">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="w-3.5 h-3.5 rounded-full" style="background-color: #2F1E16;"></span>
+                    <span class="font-label-md text-label-md text-on-surface">Nâu Socola Đen (Dark Mocha)</span>
+                  </div>
+                  <span class="font-label-sm text-outline">Duyên Dáng</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-space-xs border-t border-outline-variant/20 flex items-center justify-between text-outline">
+              <span class="font-label-sm text-[11px]">Tránh:</span>
+              <span class="font-label-sm text-[11px] text-error font-semibold">Đen Ánh Xanh / Xám Khói Bạc</span>
+            </div>
+          </div>
+
+          <!-- Card 6: Mùi Hương Bản Sắc -->
+          <div
+            class="p-space-md rounded-2xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/20 mb-space-sm">
+                <span class="font-label-sm text-[11px] text-primary uppercase tracking-widest">DẤU ẤN KHỨU GIÁC</span>
+                <span class="material-symbols-outlined text-outline text-[18px]">spa</span>
+              </div>
+              <h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Mùi Hương Bản Sắc</h4>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Lan tỏa nét quý phái thanh tao từ gỗ hương, hổ phách quyện vani ấm nồng.
+              </p>
+
+              <div class="p-space-xs rounded-lg bg-surface-container-low mb-space-md">
+                <div class="flex items-center gap-space-xs mb-1">
+                  <span class="material-symbols-outlined text-primary text-[16px]">local_florist</span>
+                  <span class="font-label-md text-label-md text-on-surface font-semibold">Họ Hương Ấm Áp &amp; Gỗ
+                    Trầm</span>
+                </div>
+                <p class="font-body-sm text-[12px] text-on-surface-variant mb-space-xs leading-relaxed">
+                  Gợi cảm mộc mạc của vani ấm, hoa nhài hoang dã, gỗ tuyết tùng và hổ phách ấm mượt. Quý phái và tôn khí
+                  chất riêng.
+                </p>
+                <div class="flex flex-wrap gap-1">
+                  <span
+                    class="px-2 py-0.5 rounded-full bg-surface-container-high text-outline text-[10px] font-semibold">Sandalwood</span>
+                  <span
+                    class="px-2 py-0.5 rounded-full bg-surface-container-high text-outline text-[10px] font-semibold">Amber</span>
+                  <span
+                    class="px-2 py-0.5 rounded-full bg-surface-container-high text-outline text-[10px] font-semibold">Cashmere</span>
+                  <span
+                    class="px-2 py-0.5 rounded-full bg-surface-container-high text-outline text-[10px] font-semibold">Warm
+                    Fig</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-space-xs border-t border-outline-variant/20 flex items-center justify-between text-outline">
+              <span class="font-label-sm text-[11px]">Cảm giác gợi nên:</span>
+              <span class="font-label-sm text-[11px] text-primary font-semibold">Ấm áp • Quyến rũ • Thanh lịch</span>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- ====================================================================
+           5. LUXURY CALL TO ACTION BANNER (TRỢ LÝ MỸ PHẨM)
+           ==================================================================== -->
+      <section
+        class="rounded-3xl bg-[#1F1B18] text-white p-space-lg md:p-space-xl relative overflow-hidden shadow-2xl flex flex-col items-start justify-between gap-space-lg">
+
+        <!-- Ambient Warm Gold Aura -->
+        <div class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-primary/20 blur-3xl pointer-events-none">
+        </div>
+
+        <div class="relative z-10 max-w-2xl">
+          <div
+            class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-white/10 backdrop-blur-md mb-space-sm">
+            <span class="material-symbols-outlined text-primary-container text-[16px]">magic_button</span>
+            <span class="font-label-sm text-label-sm text-primary-container uppercase tracking-widest">
+              Trợ Lý Mỹ Phẩm Thông Minh Sẵn Sàng
+            </span>
+          </div>
+
+          <h3 class="font-headline-lg text-headline-lg text-white mb-space-xs">
+            Khám Phá Mỹ Phẩm Khớp Mã Màu Riêng Của Bạn
+          </h3>
+
+          <p class="font-body-md text-body-md text-white/70 leading-relaxed">
+            Hệ thống AI đã tự động lọc hơn 1,400 dòng son, kem nền, phấn mắt từ Chanel, Dior, NARS và các thương hiệu
+            nội địa cao cấp hoàn toàn tương thích với hồ sơ <strong class="text-white font-semibold">Soft Autumn
+              #LP-89240</strong>.
+          </p>
+        </div>
+
+        <div class="relative z-10 flex flex-wrap items-center gap-space-sm">
+          <a href="cosmetics.html"
+            class="inline-flex items-center justify-center gap-space-xs px-space-xl py-space-sm rounded-full bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md uppercase tracking-wider transition-all duration-300 shadow-lg hover:shadow-xl group">
+            <span>CHUYỂN SANG TRỢ LÝ MỸ PHẨM</span>
+            <span
+              class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+          </a>
+
+          <a href="studio.html"
+            class="inline-flex items-center justify-center px-space-lg py-space-sm rounded-full bg-white/10 hover:bg-white/20 text-white font-label-md text-label-md transition-colors border border-white/15">
+            PHÂN TÍCH LẠI ẢNH MỚI
+          </a>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="w-full bg-surface-container-low text-on-surface-variant border-t border-outline-variant/30">
+    <div class="w-full px-margin pt-space-xl pb-space-lg">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter mb-space-xl">
+
+        <div class="lg:col-span-4 flex flex-col items-start pr-space-lg">
+          <span class="font-headline-md text-headline-md text-primary mb-space-xs">Vibe Color</span>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md max-w-sm">
+            Nền tảng phân tích sắc diện cá nhân chuẩn xác kết hợp trí tuệ quang phổ nhân tạo, nâng tầm nghi thức làm đẹp
+            và định hình bảng màu độc bản cho mỗi người phụ nữ.
+          </p>
+          <div
+            class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+            <span class="material-symbols-outlined text-primary text-[16px]">auto_awesome</span>
+            <span>AI Skin Lab Spectral Engine v3.4</span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-3 flex flex-col">
+          <h4 class="font-label-md text-label-md tracking-widest text-primary uppercase mb-space-md">Hệ Mùa Cá Nhân</h4>
+          <ul class="flex flex-col gap-space-sm font-body-sm text-body-sm">
+            <li><a class="hover:text-on-surface transition-colors flex items-center justify-between group"
+                href="../home_page.html"><span>Xuân Ấm Áp (Spring Warm)</span><span
+                  class="font-label-sm text-outline opacity-0 group-hover:opacity-100 transition-opacity">Radiant</span></a>
+            </li>
+            <li><a class="hover:text-on-surface transition-colors flex items-center justify-between group"
+                href="../home_page.html"><span>Hạ Tinh Tế (Summer Cool)</span><span
+                  class="font-label-sm text-outline opacity-0 group-hover:opacity-100 transition-opacity">Ethereal</span></a>
+            </li>
+            <li><a class="hover:text-on-surface transition-colors flex items-center justify-between group"
+                href="../home_page.html"><span>Thu Trầm Ấm (Autumn Warm)</span><span
+                  class="font-label-sm text-outline opacity-0 group-hover:opacity-100 transition-opacity">Velvet</span></a>
+            </li>
+            <li><a class="hover:text-on-surface transition-colors flex items-center justify-between group"
+                href="../home_page.html"><span>Đông Sang Trọng (Winter Cool)</span><span
+                  class="font-label-sm text-outline opacity-0 group-hover:opacity-100 transition-opacity">Couture</span></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-2 flex flex-col">
+          <h4 class="font-label-md text-label-md tracking-widest text-primary uppercase mb-space-md">Dịch Vụ &amp; Trải
+            Nghiệm</h4>
+          <ul class="flex flex-col gap-space-sm font-body-sm text-body-sm">
+            <li><a class="hover:text-on-surface transition-colors" href="studio.html">Draping Ảo Trực Tiếp</a></li>
+            <li><a class="hover:text-on-surface transition-colors" href="cosmetics.html">Tra Cứu Tone Son Chuẩn</a></li>
+            <li><a class="hover:text-on-surface transition-colors" href="cosmetics.html">Hòa Sắc Phấn Má &amp; Nền</a>
+            </li>
+            <li><a class="hover:text-on-surface transition-colors" href="dossier.html">Báo Cáo Sắc Ký Riêng</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3 flex flex-col">
+          <h4 class="font-label-md text-label-md tracking-widest text-primary uppercase mb-space-xs">Bản Tin Sắc Điệu
+          </h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+            Nhận đặc quyền báo cáo xu hướng sắc màu mùa mới và gợi ý mỹ phẩm phù hợp undertone.
+          </p>
+          <form class="flex flex-col gap-space-xs w-full">
+            <div
+              class="flex items-center rounded-full bg-surface-container-lowest p-1 shadow-[0_2px_8px_rgba(31,27,24,0.03)]">
+              <input
+                class="w-full px-space-md py-space-xs bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none"
+                placeholder="Địa chỉ email thượng khách..." type="email">
+              <button
+                class="px-space-md py-space-xs rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container hover:text-on-primary-container transition-colors shrink-0"
+                type="button">
+                Đăng ký
+              </button>
+            </div>
+            <span class="font-label-sm text-label-sm text-outline mt-1">Bảo mật thông tin theo tiêu chuẩn Maison de
+              Beauté.</span>
+          </form>
+        </div>
+
+      </div>
+
+      <div
+        class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm border-t border-outline-variant/30">
+        <p class="font-label-sm text-label-sm text-outline">
+          © 2025 Vibe Color. Bản quyền thuộc về Viện Nghiên cứu Sắc diện Á Đông. All rights reserved.
+        </p>
+        <div class="flex items-center gap-space-md font-label-sm text-label-sm text-outline">
+          <a class="hover:text-on-surface transition-colors" href="#">Điều khoản dịch vụ</a>
+          <a class="hover:text-on-surface transition-colors" href="#">Chính sách sắc ký bảo mật</a>
+          <a class="hover:text-on-surface transition-colors" href="#">Liên hệ Chuyên viên</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       FLOATING TOAST NOTIFICATION FOR COPY ACTIONS
+       ======================================================================== -->
+  <div id="toast"
+    class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 px-space-lg py-space-sm rounded-full bg-[#1F1B18] text-white font-label-md text-label-md shadow-2xl flex items-center gap-space-xs opacity-0 pointer-events-none transition-all duration-300">
+    <span class="material-symbols-outlined text-primary-container text-[18px]">check_circle</span>
+    <span id="toastMessage">Đã sao chép mã màu thành công!</span>
+  </div>
+
+  <script>
+    /**
+     * Copy HEX code to clipboard and show toast
+     */
+    function copyHex(hex, name) {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(hex).then(() => {
+          showToast(`Đã sao chép mã màu ${hex} (${name})`);
+        });
+      } else {
+        showToast(`Mã màu: ${hex} (${name})`);
+      }
+    }
+
+    /**
+     * Copy share link to clipboard
+     */
+    function copyShareLink() {
+      const url = window.location.href;
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(url).then(() => {
+          showToast('Đã sao chép liên kết Hồ Sơ Sắc Ký vào bộ nhớ tạm!');
+        });
+      }
+    }
+
+    /**
+     * Display toast message
+     */
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const msg = document.getElementById('toastMessage');
+      if (!toast || !msg) return;
+
+      msg.textContent = message;
+      toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
+      toast.classList.add('opacity-100', 'translate-y-0');
+
+      setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
+      }, 2500);
+    }
+  </script>
+</body>
+
+</html>
