@@ -21,5 +21,19 @@
         if (typeof window.initNavigation === 'function') {
             window.initNavigation();
         }
+
+        // 4. Synchronize user profile avatar from Studio diagnostic
+        try {
+            const saved = localStorage.getItem('vibeColor_userProfile');
+            if (saved) {
+                const profile = JSON.parse(saved);
+                if (profile.portraitUrl) {
+                    const topAvatar = document.getElementById('topNavAvatar');
+                    if (topAvatar) topAvatar.src = profile.portraitUrl;
+                }
+            }
+        } catch (e) {
+            console.error(e);
+        }
     });
 })();
